@@ -20,12 +20,12 @@ class Animal
 
     public function eat()
     {
-        echo 'Їм';
+        echo 'Їм ' . $this->getLocation();
     }
 
     public function sleep()
     {
-        echo 'Сплю';
+        echo 'Сплю в' . $this->getLocation();
 
     }
 

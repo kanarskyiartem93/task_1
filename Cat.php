@@ -3,6 +3,12 @@
 
 class Cat extends Animal
 {
+
+    public function __construct(string $location, string $food)
+    {
+        parent::__construct($location, $food);
+    }
+
     public function makeNoise()
     {
         echo 'Кіт мявкає';
@@ -10,12 +16,12 @@ class Cat extends Animal
 
     public function eat()
     {
-        echo 'Кіт їсть';
+        echo 'Кіт їсть ' . $this->getFood();
     }
 
     public function sleep()
     {
-        echo 'Кіт спить';
+        echo 'Кіт спить в ' . $this->getLocation();
 
     }
 }
