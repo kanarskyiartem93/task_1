@@ -12,16 +12,17 @@ $cat = new Cat('Риба', 'Львів');
 $dog = new Dog('Курка', 'Одеса');
 $horse = new Horse('Овес', 'Харків');
 
-$animals = [];
+$animals = array();
 
-$animals = $cat;
-$animals = $dog;
-$animals = $horse;
+array_push($animals, $cat);
+array_push($animals, $dog);
+array_push($animals, $horse);
 
 $vet = new Vet();
 
 foreach ($animals as $animal) {
     $vet->treatAnimal($animal);
+    echo '<br>';
 }
 
 
